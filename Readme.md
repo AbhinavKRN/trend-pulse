@@ -4,9 +4,12 @@ A web application that automatically scrapes trending topics from Twitter/X usin
 
 ## Demo Video
 
-https://github.com/AbhinavKRN/trend-pulse/assets/videos/Scrap.mp4
+<div align="center">
+  <video src="https://github.com/AbhinavKRN/trend-pulse/blob/main/assets/videos/Scrap.mp4" controls="controls" style="max-width: 730px;">
+  </video>
+</div>
 
-[![Project Demo]](https://github.com/AbhinavKRN/trend-pulse/assets/videos/Scrap.mp4)
+▶️ Short demo showcasing the Twitter Trends Scraper in action using Selenium WebDriver
 
 ## Features
 
