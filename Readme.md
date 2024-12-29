@@ -4,22 +4,11 @@ A web application that automatically scrapes trending topics from Twitter/X usin
 
 ## Demo Video
 
-<div style="max-width: 100%; background-color: #1e1e1e; border-radius: 6px; overflow: hidden; margin: 20px 0;">
-    <div style="background-color: #2d2d2d; padding: 8px; display: flex; align-items: center; gap: 8px;">
-        <svg width="16" height="16" viewBox="0 0 16 16" style="fill: #cccccc;">
-            <path d="M14 4v8H2V4h12zm0-1H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1z"/>
-        </svg>
-        <span style="color: #cccccc; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Screencast.from.2024-12-27.webm</span>
-    </div>
-    
-    <div style="background-color: #2d2d2d; padding: 8px; display: flex; align-items: center; gap: 12px;">
-        <span style="color: #cccccc;">0:00 / 0:35</span>
-        <div style="flex-grow: 1; height: 4px; background: #4a4a4a; border-radius: 2px;"></div>
-        <svg width="16" height="16" viewBox="0 0 16 16" style="fill: #cccccc;">
-            <path d="M6 3h4v10H6z"/>
-        </svg>
-    </div>
-</div>
+
+
+https://github.com/user-attachments/assets/f84bc2c6-110c-4c78-a7fe-2ea188927368
+
+
 
 Short demo showcasing the Twitter Trends Scraper in action using Selenium WebDriver
 
