@@ -2,6 +2,12 @@
 
 A web application that automatically scrapes trending topics from Twitter/X using Selenium and stores them in MongoDB.
 
+## Demo Video
+
+https://github.com/AbhinavKRN/trend-pulse/assets/videos/Scrap.mp4
+
+[![Project Demo]](https://github.com/AbhinavKRN/trend-pulse/assets/videos/Scrap.mp4)
+
 ## Features
 
 - Automated login to Twitter
