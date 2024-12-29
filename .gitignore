@@ -92,5 +92,3 @@ proxies.json
 .cache/
 cache/
 *.cache
-
-assets/
