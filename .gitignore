@@ -1,0 +1,94 @@
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Environment Variables
+.env
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*.swn
+.DS_Store
+
+# Logs
+*.log
+logs/
+
+# Database
+*.db
+*.sqlite3
+
+# Chrome Driver
+chromedriver
+chromedriver.exe
+
+# Test coverage
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+
+# Scraped data
+data/
+output/
+exports/
+
+# Browser profiles/temp files
+.chrome/
+.firefox/
+user-data-dir/
+
+# Debug files
+debug/
+*.debug
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Static file compilation
+static/compiled/
+static/dist/
+*.min.css
+*.min.js
+
+# Proxy lists and configurations
+proxies.txt
+proxies.json
+*.proxy
+
+# Cache files
+.cache/
+cache/
+*.cache
