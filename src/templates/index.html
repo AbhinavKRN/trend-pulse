@@ -1,0 +1,85 @@
+# File: templates/index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Trends Scraper</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Twitter Trends Scraper</h1>
+        
+        <button id="scrapeButton" onclick="scrapeTrends()">
+            Click here to run the script
+        </button>
+
+        <div id="loading" class="hidden">
+            <div class="spinner"></div>
+            <p>Fetching trending topics...</p>
+        </div>
+
+        <div id="results" class="hidden">
+            <h2>Results</h2>
+            <div id="trendsContent"></div>
+        </div>
+
+        <div id="error" class="hidden">
+            <p class="error-message"></p>
+        </div>
+    </div>
+
+    <script>
+        async function scrapeTrends() {
+            const button = document.getElementById('scrapeButton');
+            const loading = document.getElementById('loading');
+            const results = document.getElementById('results');
+            const error = document.getElementById('error');
+            const content = document.getElementById('trendsContent');
+
+            button.disabled = true;
+            loading.classList.remove('hidden');
+            results.classList.add('hidden');
+            error.classList.add('hidden');
+
+            try {
+                const response = await fetch('/scrape');
+                const data = await response.json();
+
+                if (data.status === 'success') {
+                    content.innerHTML = `
+                        <p>These are the most happening topics as on ${data.data.timestamp}</p>
+                        <ul>
+                            ${data.data.trends.map((trend, index) => 
+                                `<li>Name of trend${index + 1}: ${trend}</li>`
+                            ).join('')}
+                        </ul>
+                        <p>The IP address used for this query was ${data.data.ip_address}</p>
+                        <div class="json-preview">
+                            <h3>MongoDB Record:</h3>
+                            <pre>${JSON.stringify({
+                                _id: data.data.id,
+                                trends: data.data.trends,
+                                timestamp: data.data.timestamp,
+                                ip_address: data.data.ip_address
+                            }, null, 2)}</pre>
+                        </div>
+                        <button onclick="scrapeTrends()">Click here to run the query again</button>
+                    `;
+                    results.classList.remove('hidden');
+                } else {
+                    throw new Error(data.message);
+                }
+            } catch (err) {
+                error.querySelector('.error-message').textContent = 
+                    `Error: ${err.message || 'Failed to fetch trends'}`;
+                error.classList.remove('hidden');
+            } finally {
+                button.disabled = false;
+                loading.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
