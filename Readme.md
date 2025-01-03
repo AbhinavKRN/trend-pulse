@@ -1,6 +1,6 @@
 # Twitter Trends Scraper
 
-A web application that automatically scrapes trending topics from Twitter/X using Selenium and stores them in MongoDB.
+A web application that automatically scrapes trending topics from X using Selenium and stores them in MongoDB.
 
 ## Demo Video
 
